@@ -1,6 +1,6 @@
 
 import React from 'react';
-
+import Hero from '../shared/Hero';
 import './Home.scss';
 
 export interface IHomeProps {}
