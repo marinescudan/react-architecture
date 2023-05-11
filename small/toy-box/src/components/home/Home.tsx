@@ -20,11 +20,7 @@ const Home = ({}: IHomeProps) => {
                     <span>0</span>
                 </div>
             </header>
-            <div>
-                <img src="" alt="hero" />
-                <h1>Toy Box</h1>
-                <h2>Where all your toy dreams come true</h2>
-            </div>
+            <Hero ></Hero>
             <div>
                 <div>
                     <h3>Product 1</h3>
