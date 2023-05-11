@@ -1,0 +1,12 @@
+{
+  "name": "generator",
+  "version": "1.0.0",
+  "description": "generates React entities",
+  "main": "index.js",
+  "scripts": {
+    "gc": "node .index $1",
+    "test": "test"
+  },
+  "author": "",
+  "license": "ISC"
+}
