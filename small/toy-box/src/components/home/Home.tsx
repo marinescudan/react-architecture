@@ -1,11 +1,26 @@
 
 import React from 'react';
-import Hero from '../shared/Hero';
+import {Hero, IHeroProps} from '../shared/Hero';
 import './Home.scss';
 
 export interface IHomeProps {}
 
 const Home = ({}: IHomeProps) => {
+
+    const heroProps: IHeroProps = {
+        image: {
+            src: "",
+            alt: "",
+        },
+        title: "Welcome to the Toy Box",
+        subTitle: "The best toys in the world",
+        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        cta: {
+            label: "Shop Now",
+            link: "/products",
+        }
+    };
+
     return (
         <div>
             <header>
@@ -20,7 +35,13 @@ const Home = ({}: IHomeProps) => {
                     <span>0</span>
                 </div>
             </header>
-            <Hero ></Hero>
+            <Hero
+                image={heroProps.image}
+                title={heroProps.title}
+                subTitle={heroProps.subTitle}
+                description={heroProps.description}
+                cta={heroProps.cta}
+            ></Hero>
             <div>
                 <div>
                     <h3>Product 1</h3>
