@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Banner example</title>
+
+<script defer src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script defer src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script defer src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+<style>
+    body {
+        margin: 0;
+    }
+    #banner {
+        background: #eee url('https://picsum.photos/800/200') no-repeat;
+        background-size: cover;
+        background-position: center center;
+    }
+    .wrapper {
+        box-sizing: border-box;
+        padding: 32px;
+        width: 800px;
+        height: 200px;
+        background: linear-gradient(to right, #ffffff94 0%,  #ffffff94 30%, #fff0 100%);
+    }
+    h1 {
+        color: #7e009f;
+        margin: 0 0 16px 0;
+    }
+    h2 {
+        color: #7b4f87;
+        margin: 0;  
+    }
+    p {
+        color: #3e2744;
+        margin: 0 0 16px 0;
+        font-size: 16px;
+    }
+    button {
+        color: #f5d0ff;
+        padding: auto;
+        border: 1px solid #5a3364;
+        outline: none;
+        background: #73547b;
+        min-width: 160px;
+        text-align: left;
+        padding: 8px 16px;
+    }
+</style>
+</head>
+<body>
+<div id="banner">Loading...</div>
+
+<script type="text/babel">
+
+class Banner extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+       clicked: false,
+       data: {
+          title: 'Banner hoast example',
+          subTitle: 'This is a banner hoast example',
+          description: 'This is a banner hoast example'
+       }
+    };
+    this.onClick.bind(this);
+  }
+
+  render() {
+    return (
+      <div className="wrapper">
+        <h1>{this.state.data.title}</h1>
+        <h2>{this.state.data.subTitle}</h2>
+        <p>{this.state.data.description}</p>
+        <button onClick={this.onClick}>CTA</button>
+      </div>
+    );
+  }
+
+  onClick = () => {
+    this.setState({ clicked: true });
+    console.log('clicked');
+  }
+}
+
+const domContainer = document.querySelector('#banner');
+const root = ReactDOM.createRoot(domContainer);
+root.render(React.createElement(Banner));
+
+</script>
+</body>
+</html>

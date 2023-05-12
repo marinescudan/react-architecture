@@ -56,7 +56,13 @@ export const Hero = ({
   description,
   cta,
 }: IHeroProps) => {
-  return <StyledHero>
+  return <StyledHero
+    image={image}
+    title={title}
+    subTitle={subTitle}
+    description={description}
+    cta={cta}
+  >
     <div>
       <h1>{title}</h1>
       <h2>{subTitle}</h2>
