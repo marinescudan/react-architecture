@@ -1,4 +1,5 @@
-import Http from '../../services/Http.service';
+import { HttpGetOptions } from '../../services/Http.service';
+import  HttpService from '../../services/Http.service';
 
 import axios from "axios";
 

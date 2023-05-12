@@ -9,7 +9,7 @@ const Home = ({}: IHomeProps) => {
 
     const heroProps: IHeroProps = {
         image: {
-            src: "",
+            src: "https://fastly.picsum.photos/id/96/4752/3168.jpg?hmac=KNXudB1q84CHl2opIFEY4ph12da5JD5GzKzH5SeuRVM",
             alt: "",
         },
         title: "Welcome to the Toy Box",
@@ -23,18 +23,6 @@ const Home = ({}: IHomeProps) => {
 
     return (
         <div>
-            <header>
-                <div>
-                    <img src="" alt="logo" />
-                </div>
-                <div>
-                    <input type="text" placeholder="search" />
-                </div>
-                <div>
-                    <img src="" alt="cart" />
-                    <span>0</span>
-                </div>
-            </header>
             <Hero
                 image={heroProps.image}
                 title={heroProps.title}
@@ -42,57 +30,38 @@ const Home = ({}: IHomeProps) => {
                 description={heroProps.description}
                 cta={heroProps.cta}
             ></Hero>
-            <div>
-                <div>
+            <section className='product-list'>
+                <div className='product-card'>
                     <h3>Product 1</h3>
                     <p>$1.00</p>
                     <button>Add to Cart</button>
                 </div>
-                <div>
+                <div className='product-card'>
                     <h3>Product 2</h3>
                     <p>$2.00</p>
                     <button>Add to Cart</button>
                 </div>
-                <div>
+                <div className='product-card'>
                     <h3>Product 3</h3>
                     <p>$3.00</p>
                     <button>Add to Cart</button>
                 </div>
-                <div>
+                <div className='product-card'>
                     <h3>Product 4</h3>
                     <p>$4.00</p>
                     <button>Add to Cart</button>
                 </div>
-                <div>
+                <div className='product-card'>
                     <h3>Product 5</h3>
                     <p>$5.00</p>
                     <button>Add to Cart</button>
                 </div>
-                <div>
+                <div className='product-card'>
                     <h3>Product 6</h3>
                     <p>$6.00</p>
                     <button>Add to Cart</button>
                 </div>
-            </div>
-            <footer>
-                <div>
-                    <img src="" alt="logo" />
-                </div>
-                <div>
-                    <ul>
-                        <li>Home</li>
-                        <li>Products</li>
-                        <li>Cart</li>
-                    </ul>
-                </div>
-                <div>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Twitter</li>
-                        <li>Instagram</li>
-                    </ul>
-                </div>
-            </footer>
+            </section>
         </div>
     );
 };
